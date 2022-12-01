@@ -1,0 +1,56 @@
+composer create-project laravel/laravel (nama project) "8.x"
+php artisan serve (untuk menghidupkan serve laravel)
+
+untuk mendefiisikan route baru :
+Route::<http-method>('url', <functiton callback>)
+$url adalah alamat dari route yang ditulis dalam string
+$callback adalah sebuah function yang akan dijalankan ketika suatu route
+dipanggil
+berupa closure atau metode dalam controller
+
+didalam file web.php
+Route ::get('/hello , function(){
+echo "<h1> Hello saya dari rpl </h1>";
+});
+
+http method adalah sebagai penanda apakah request HTTP ini tujuannya
+untuk ambil data, buat data baru, update data , atau hapus data.
+GET	Ambil Data
+POST	Buat Data Baru
+PUT	Update Data secara keseluruhan
+PATCH	Update Data sebagian
+DELETE	Hapus Data
+OPTIONS	Minta informasi mengenai opsi komunikasi yang diperbolehkan
+HEAD	Minta Http header nya saja
+
+contoh :
+Membuat CRUD card karyawan
+GET	/karyawan/{idKaryawan}	/karyawan
+POST	/karyawan/{idKaryawan}	/karyawan
+PUT	/karyawan/{idKaryawan}	/karyawan
+PATCH	/karyawan/{idKaryawan}	/karyawan
+DELETE	/karyawan/{idKaryawan}	/karyawan
+
+/akun
+/akun create
+
+controler
+cd . tempat project
+php artisan make:controler AkunControler
+
+View
+Membuat view ada aturan
+1. harus menambahkan namaview wajib menggunakan (namaview.blade.php).
+
+Step by Step untuk membuat template laravel
+buat controllers
+buat folder account
+1. index
+2. create
+3. show
+
+di conrollers untuk memanggil folder (namafolder.namafile)
+panggil controller
+buat route untuk menampilkan pada web.php
+
+{{asset ('adminLTE/.../')}}">
